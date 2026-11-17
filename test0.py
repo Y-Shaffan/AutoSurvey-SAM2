@@ -20,10 +20,10 @@ if device.type == "cuda":
     torch.autocast("cuda", dtype=torch.bfloat16).__enter__() # Use bfloat16 for inference
 
 # SAM model
-sam2_checkpoint = "D:/Shaffan/AutoSurvey/sam2/checkpoints/sam2.1_hiera_tiny.pt"
+sam2_checkpoint = ""
 
 # Config file for SAM model
-model_cfg = "D:/Shaffan/AutoSurvey/sam2/sam2/configs/sam2.1/sam2.1_hiera_t.yaml"
+model_cfg = ""
 
 # Create predictor object
 predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint, device=device)
@@ -48,7 +48,7 @@ def show_points(coords, labels, ax, marker_size=200):
     ax.scatter(neg_points[:, 0], neg_points[:, 1], color="red", marker="*", s=marker_size, edgecolor="white", linewidth=1.25)
 
 # Path to video frames
-videoFolder = "D:/Shaffan/AutoSurvey/media/vids/Hithadhoo_dir_Fuvahmulah_Dec2025/frames"
+videoFolder = ""
 
 frame_names = [
     p for p in os.listdir(videoFolder)
