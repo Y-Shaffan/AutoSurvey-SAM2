@@ -6,10 +6,10 @@ from sam2.build_sam import build_sam2_video_predictor
 # # ffmpeg -i input.mp4 -q:v 2 -start_number 0 %05d.jpg
 
 CHUNK = 500 # frames per chunk, ~12.6 MB RAM each (500 ≈ 6.3 GB), approx 2MB per frame for 1080p
-VIDEO_FOLDER = ""
-OUT_MASKS = ""
-OUT_VIDEO = ""
-sam2_checkpoint, model_cfg = "", ""
+VIDEO_FOLDER = "D:/Shaffan/AutoSurvey/media/vids/Hithadhoo_dir_Fuvahmulah_Dec2025/frames"
+OUT_MASKS = "output/test_run2/masks"
+OUT_VIDEO = "output/test_run2/overlay.mp4"
+sam2_checkpoint, model_cfg = "D:/Shaffan/AutoSurvey/sam2/checkpoints/sam2.1_hiera_tiny.pt", "D:/Shaffan/AutoSurvey/sam2/sam2/configs/sam2.1/sam2.1_hiera_t.yaml"
 points = np.array([[507, 637], [1909, 1047]], dtype=np.float32)
 labels = np.array([1, 1], dtype=np.int32)
 
