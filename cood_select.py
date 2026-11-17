@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 from PIL import Image
 
-videoFolder = ""
+videoFolder = "D:/Shaffan/AutoSurvey/media/vids/Hithadhoo_dir_Fuvahmulah_Dec2025/frames"
 
 frame_names = [
     p for p in os.listdir(videoFolder)
