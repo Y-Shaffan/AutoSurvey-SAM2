@@ -2,7 +2,7 @@ import os
 import cv2
 import numpy as np
 from PIL import Image
-m = np.array(Image.open(""))
+m = np.array(Image.open("output/test_run2/masks/00560.png"))
 print(np.unique(m), (m > 0).sum())
 
 # def save_viewable(g, lab):
